@@ -1,48 +1,64 @@
-// Función para cargar los cursos desde el JSON
+// 1. Cargar cursos dinámicamente
 async function cargarCursos() {
     try {
-        // Buscamos el archivo que creaste en la carpeta data
         const respuesta = await fetch('./data/cursos.json');
         const cursos = await respuesta.json();
-        
-        // Seleccionamos el contenedor que dejamos en el index.html
         const contenedor = document.getElementById('contenedor-cursos');
         
-        // Limpiamos el contenedor por si hay algo
-        contenedor.innerHTML = '';
+        if(!contenedor) return; 
 
-        // Recorremos los cursos y creamos las tarjetas (cards)
+        contenedor.innerHTML = '';
         cursos.forEach(curso => {
             const card = document.createElement('div');
-            card.className = 'bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200';
-            
+            card.className = 'bg-white rounded-2xl shadow-sm hover:shadow-xl overflow-hidden border border-gray-100 transition-all duration-300 hover:-translate-y-1';
             card.innerHTML = `
                 <img src="${curso.imagen}" alt="${curso.titulo}" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
-                        <h4 class="text-xl font-bold">${curso.titulo}</h4>
-                        <button onclick="agregarFavorito(${curso.id})" class="text-gray-400 hover:text-yellow-500 text-2xl">☆</button>
+                        <h4 class="text-xl font-bold text-gray-900">${curso.titulo}</h4>
+                        <button onclick="gestionarFavorito(${curso.id})" class="text-2xl hover:scale-125 transition">⭐</button>
                     </div>
                     <p class="text-gray-600 mb-4 text-sm">${curso.descripcion}</p>
-                    <div class="flex justify-between items-center text-sm text-gray-500 mb-4">
-                        <span>⏱ ${curso.duracion}</span>
-                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">${curso.nivel}</span>
-                    </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Ver más</button>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition font-semibold">Ver detalles</button>
                 </div>
             `;
             contenedor.appendChild(card);
         });
-    } catch (error) {
-        console.error('Error al cargar los cursos:', error);
+    } catch (error) { console.error("Error:", error); }
+}
+
+// 2. Lógica de Favoritos con LocalStorage 
+function gestionarFavorito(id) {
+    let favoritos = JSON.parse(localStorage.getItem('misFavoritos')) || [];
+    if (!favoritos.includes(id)) {
+        favoritos.push(id);
+        alert('¡Curso guardado en favoritos! ❤️');
+    } else {
+        alert('Este curso ya está en tu lista.');
     }
+    localStorage.setItem('misFavoritos', JSON.stringify(favoritos));
 }
 
-// Función básica para favoritos (usará localStorage como pide la guía)
-function agregarFavorito(id) {
-    alert('¡Curso ' + id + ' agregado a favoritos! (Funcionalidad en desarrollo)');
-    // Aquí implementaremos el localStorage en el siguiente paso
-}
+// 3. Validaciones de Formulario 
+document.addEventListener('submit', function(e) {
+    if (e.target.id === 'formulario-contacto') {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        const nombre = document.getElementById('nombre').value;
+        const mensajeExito = document.getElementById('mensaje-exito');
 
-// Ejecutar la carga cuando el documento esté listo
+        // Validación simple de nombre y formato de correo
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (nombre.length < 3) {
+            alert("Por favor, ingresa un nombre válido.");
+        } else if (!emailRegex.test(email)) {
+            alert("El formato del correo no es correcto.");
+        } else {
+            mensajeExito.classList.remove('hidden');
+            e.target.reset();
+        }
+    }
+});
+
 document.addEventListener('DOMContentLoaded', cargarCursos);
