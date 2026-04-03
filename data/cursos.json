@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "titulo": "Master en Desarrollo Web Fullstack",
+    "descripcion": "Domina las tecnologías más demandadas: React, Tailwind CSS y Node.js.",
+    "imagen": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=400",
+    "duracion": "24 Semanas",
+    "nivel": "Intermedio",
+    "instructor": "Jane Doe",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "titulo": "Master en React & TypeScript",
+    "descripcion": "Aprende a construir aplicaciones escalables con tipado fuerte y hooks avanzados.",
+    "imagen": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=400",
+    "duracion": "12 Semanas",
+    "nivel": "Avanzado",
+    "instructor": "John Smith",
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "titulo": "Arquitectura de Microservicios",
+    "descripcion": "Diseña sistemas distribuidos de alta disponibilidad y escalabilidad.",
+    "imagen": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400",
+    "duracion": "16 Semanas",
+    "nivel": "Avanzado",
+    "instructor": "Robert Martin",
+    "destacado": true
+  }
+]
