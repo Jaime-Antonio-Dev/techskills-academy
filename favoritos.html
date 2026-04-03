@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSkills Academy - Mis Favoritos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-purple-600">TechSkills</h1>
+            <nav>
+                <ul class="flex space-x-6 font-medium text-gray-700">
+                    <li><a href="index.html" class="hover:text-purple-600">Inicio</a></li>
+                    <li><a href="catalogo.html" class="hover:text-purple-600">Cursos</a></li>
+                    <li><a href="favoritos.html" class="text-purple-600 font-bold border-b-2 border-purple-600">Favoritos</a></li>
+                    <li><a href="contacto.html" class="hover:text-purple-600">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto py-12 px-4 flex-grow">
+        <h2 class="text-3xl font-bold text-center mb-4">Tus Cursos Guardados</h2>
+        <p class="text-center text-gray-600 mb-12">Aquí aparecerán los cursos que marcaste con la estrella ⭐</p>
+
+        <div id="contenedor-favoritos" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 text-center mt-12">
+        <p>© 2026 TechSkills Academy - Innovando desde La Calera</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
