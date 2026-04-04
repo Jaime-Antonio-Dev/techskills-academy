@@ -8,10 +8,18 @@ async function cargarDatos() {
         todosLosCursos = await respuesta.json(); 
         
         // --- LÓGICA PARA CATÁLOGO/INICIO ---
-        const contenedorCursos = document.getElementById('contenedor-cursos');
-        if (contenedorCursos) {
-            renderizar(todosLosCursos, contenedorCursos);
-        }
+const contenedorCursos = document.getElementById('contenedor-cursos');
+if (contenedorCursos) {
+    // Si el ID del contenedor indica que es el INICIO (puedes ponerle un id diferente en el HTML del index)
+    // o simplemente filtramos si estamos en index.html
+    if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+        const destacados = todosLosCursos.filter(c => c.destacado === true);
+        renderizar(destacados, contenedorCursos);
+    } else {
+        // En catalogo.html mostramos TODO
+        renderizar(todosLosCursos, contenedorCursos);
+    }
+}
 
         // --- LÓGICA PARA FAVORITOS ---
         const contenedorFavs = document.getElementById('contenedor-favoritos');
