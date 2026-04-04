@@ -1,64 +1,67 @@
-// Función principal para cargar cursos (Sirve para Catálogo e Inicio)
-async function cargarCursos() {
+async function cargarDatos() {
     try {
         const respuesta = await fetch('./data/cursos.json');
         const cursos = await respuesta.json();
         
-        // 1. Lógica para Catálogo/Inicio
-        const contenedorGeneral = document.getElementById('contenedor-cursos');
-        if(contenedorGeneral) {
-            renderizarCursos(cursos, contenedorGeneral);
+        // --- LÓGICA PARA CATÁLOGO ---
+        const contenedorCursos = document.getElementById('contenedor-cursos');
+        if (contenedorCursos) {
+            renderizar(cursos, contenedorCursos);
         }
 
-        // 2. Lógica para la página de Favoritos (LO QUE NOS FALTA)
+        // --- LÓGICA PARA FAVORITOS 
         const contenedorFavs = document.getElementById('contenedor-favoritos');
-        if(contenedorFavs) {
+        if (contenedorFavs) {
             const IDsFavoritos = JSON.parse(localStorage.getItem('misFavoritos')) || [];
-            const cursosFiltrados = cursos.filter(c => IDsFavoritos.includes(c.id));
+            // Filtramos el JSON para quedarnos solo con los que el usuario guardó
+            const misCursosFavs = cursos.filter(c => IDsFavoritos.includes(c.id));
             
-            if(cursosFiltrados.length === 0) {
-                contenedorFavs.innerHTML = '<p class="col-span-3 text-center text-gray-500 italic">Aún no has guardado cursos. ¡Ve al catálogo y selecciona tus favoritos!</p>';
+            if (misCursosFavs.length === 0) {
+                contenedorFavs.innerHTML = '<p class="text-center col-span-3 text-gray-500 py-10">Aún no tienes cursos guardados. ⭐</p>';
             } else {
-                renderizarCursos(cursosFiltrados, contenedorFavs);
+                renderizar(misCursosFavs, contenedorFavs);
             }
         }
-    } catch (error) { console.error("Error:", error); }
+    } catch (e) {
+        console.error("Error cargando el JSON:", e);
+    }
 }
 
-// Función auxiliar para dibujar las tarjetas (Para no repetir código)
-function renderizarCursos(lista, contenedor) {
+// Función para crear las tarjetas en pantalla
+function renderizar(lista, contenedor) {
     contenedor.innerHTML = '';
     lista.forEach(curso => {
-        const card = document.createElement('div');
-        card.className = 'bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition';
-        card.innerHTML = `
-            <img src="${curso.imagen}" class="w-full h-40 object-cover">
-            <div class="p-5">
-                <div class="flex justify-between items-center mb-2">
-                    <h4 class="font-bold text-lg">${curso.titulo}</h4>
-                    <button onclick="gestionarFavorito(${curso.id})" class="text-xl">⭐</button>
-                </div>
-                <p class="text-gray-600 text-sm mb-4">${curso.descripcion}</p>
-                <button class="w-full py-2 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700">Detalles</button>
+        const div = document.createElement('div');
+        div.className = 'bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 p-4';
+        div.innerHTML = `
+            <img src="${curso.imagen}" class="w-full h-40 object-cover rounded-lg mb-4">
+            <div class="flex justify-between items-start mb-2">
+                <h4 class="font-bold text-lg">${curso.titulo}</h4>
+                <button onclick="toggleFavorito(${curso.id})" class="text-xl">⭐</button>
             </div>
+            <p class="text-gray-600 text-sm mb-4">${curso.descripcion}</p>
+            <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-bold shadow-purple-200 shadow-lg">Ver detalles</button>
         `;
-        contenedor.appendChild(card);
+        contenedor.appendChild(div);
     });
 }
 
-// Guardar en la memoria (LocalStorage)
-function gestionarFavorito(id) {
-    let favoritos = JSON.parse(localStorage.getItem('misFavoritos')) || [];
-    if (!favoritos.includes(id)) {
-        favoritos.push(id);
-        alert('¡Curso añadido a favoritos! ⭐');
+// Función para guardar/quitar de favoritos
+function toggleFavorito(id) {
+    let favs = JSON.parse(localStorage.getItem('misFavoritos')) || [];
+    if (favs.includes(id)) {
+        favs = favs.filter(favId => favId !== id);
+        alert("Eliminado de favoritos");
     } else {
-        // Si ya existe, lo quitamos (esto lo hace más funcional)
-        favoritos = favoritos.filter(favId => favId !== id);
-        alert('Curso eliminado de favoritos.');
+        favs.push(id);
+        alert("¡Guardado en favoritos! ⭐");
     }
-    localStorage.setItem('misFavoritos', JSON.stringify(favoritos));
-    location.reload(); // Recarga para ver el cambio de inmediato
+    localStorage.setItem('misFavoritos', JSON.stringify(favs));
+    
+    // Si estamos en la página de favoritos, recargamos para que desaparezca el que quitamos
+    if (document.getElementById('contenedor-favoritos')) {
+        location.reload();
+    }
 }
 
-document.addEventListener('DOMContentLoaded', cargarCursos);
+document.addEventListener('DOMContentLoaded', cargarDatos);
