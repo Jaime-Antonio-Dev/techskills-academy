@@ -62,11 +62,12 @@
   {
     "id": 7,
     "titulo": "Arquitectura Cloud con AWS",
-    "descripcion": "Aprende a diseñar soluciones escalables en la nube líder.",
-    "imagen": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=400",
+    "descripcion": "Aprende a diseñar soluciones escalables y seguras en la nube líder.",
+    // IMAGEN CORREGIDA: Diagrama de arquitectura de AWS. Esto SÍ tiene lógica.
+    "imagen": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=400", 
     "duracion": "12 Semanas",
     "nivel": "Intermedio",
     "destacado": false,
-    "reseña": "Domina el ecosistema de Amazon Web Services, la plataforma cloud más utilizada.\n\n✅ Computación (EC2, Lambda).\n✅ Almacenamiento S3 y bases de datos RDS.\n✅ Seguridad (IAM) y redes (VPC).\n\n🏆 Ideal para profesionales que buscan especializarse en Cloud."
+    "reseña": "Este curso te prepara para entender y utilizar el ecosistema de Amazon Web Services, el proveedor de nube líder.\n\nTemario destacado:\n✅ Computación escalable (EC2, Lambda).\n✅ Almacenamiento y bases de datos RDS.\n✅ Redes virtuales (VPC) y seguridad (IAM).\n✅ Optimización de costos y escalabilidad automática.\n\n🏆 Ideal para Ingenieros de Soporte que buscan especializarse en Cloud."
   }
 ]
