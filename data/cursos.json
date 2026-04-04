@@ -7,7 +7,7 @@
     "duracion": "24 Semanas",
     "nivel": "Intermedio",
     "destacado": true,
-    "reseña": "Este programa está diseñado para convertirte en un desarrollador versátil..."
+    "reseña": "Este programa está diseñado para convertirte en un desarrollador versátil, capaz de construir aplicaciones web modernas de principio a fin.\n\n✅ Enfoque práctico con proyectos reales para tu portafolio.\n✅ Dominio de React (Frontend), Node.js y Express (Backend).\n✅ Arquitectura de software moderna y bases de datos.\n✅ Preparación para el mercado laboral tecnológico actual.\n\n🏆 Al finalizar, estarás listo para roles de Junior Fullstack Developer."
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "duracion": "12 Semanas",
     "nivel": "Avanzado",
     "destacado": true,
-    "reseña": "Lleva tus habilidades de Frontend al siguiente nivel..."
+    "reseña": "Lleva tus habilidades de Frontend al siguiente nivel masterizando la combinación más potente del desarrollo web actual: React y TypeScript.\n\n✅ Hooks personalizados avanzado y Context API.\n✅ Integración profunda con tipos complejos y genéricos.\n✅ Patrones de diseño para componentes reutilizables.\n✅ Optimización de rendimiento en aplicaciones de gran escala.\n\n⏱ Requisito: Conocimientos sólidos de JavaScript (ES6+)."
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "duracion": "16 Semanas",
     "nivel": "Avanzado",
     "destacado": true,
-    "reseña": "Aprende cómo las grandes empresas manejan millones de usuarios..."
+    "reseña": "Aprende a diseñar y construir sistemas distribuidos, escalables y resilientes, la arquitectura detrás de plataformas como Netflix y Amazon.\n\n✅ Descomposición de monolitos en servicios independientes.\n✅ Comunicación entre servicios (APIs REST, GRP, Mensajería).\n✅ Patrones de resiliencia y tolerancia a fallos.\n✅ Despliegue independiente y gestión con contenedores.\n\n🏆 Ideal para Ingenieros de Software con experiencia."
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "duracion": "10 Semanas",
     "nivel": "Principiante",
     "destacado": false,
-    "reseña": "Domina las librerías esenciales como Pandas y NumPy para convertirte en Data Scientist."
+    "reseña": "Domina las herramientas esenciales para convertir datos crudos en información valiosa para la toma de decisiones.\n\n✅ Fundamentos sólidos de programación con Python.\n✅ Análisis exploratorio de datos con Pandas y NumPy.\n✅ Visualización interactiva con Matplotlib y Seaborn.\n✅ Introducción a modelos básicos de Machine Learning.\n\n⏱ Requisito: Ganas de aprender y lógica matemática básica."
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "duracion": "14 Semanas",
     "nivel": "Intermedio",
     "destacado": false,
-    "reseña": "Aprende a identificar vulnerabilidades y asegurar redes empresariales."
+    "reseña": "En un mundo digitalizado, la seguridad es la prioridad. Aprende a pensar como un atacante para defender organizaciones.\n\n✅ Fundamentos de redes y seguridad de la información.\n✅ Metodologías de Hacking Ético y Pentesting.\n✅ Identificación y mitigación de vulnerabilidades web.\n✅ Criptografía básica y protección de datos.\n\n🏆 Preparación para certificaciones de nivel de entrada."
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "duracion": "8 Semanas",
     "nivel": "Principiante",
     "destacado": false,
-    "reseña": "Domina la herramienta líder en diseño digital y metodologías de experiencia de usuario."
+    "reseña": "Aprende a crear experiencias digitales que los usuarios amen, dominando la herramienta líder de diseño de la industria.\n\n✅ Metodologías de investigación de experiencia de usuario (UX).\n✅ Diseño de interfaces visuales (UI) y sistemas de diseño.\n✅ Prototipado interactivo y animado con Figma.\n✅ Pruebas de usabilidad y feedback de usuarios.\n\n⏱ Requisito: Un perfil creativo e interés en tecnología."
   },
   {
     "id": 7,
@@ -67,6 +67,6 @@
     "duracion": "12 Semanas",
     "nivel": "Intermedio",
     "destacado": false,
-    "reseña": "Este curso te prepara para entender el ecosistema de Amazon Web Services. \n\nTemario:\n✅ Computación con EC2 y Lambda.\n✅ Almacenamiento con S3 y bases de datos RDS.\n✅ Redes virtuales (VPC) y seguridad (IAM).\n\nIdeal para ingenieros que buscan la certificación AWS Certified Cloud Practitioner."
+    "reseña": "Este curso te prepara para entender y utilizar el ecosistema de Amazon Web Services, el proveedor de nube líder.\n\nTemario destacado:\n✅ Computación escalable (EC2, Lambda).\n✅ Almacenamiento y bases de datos RDS.\n✅ Redes virtuales (VPC) y seguridad (IAM).\n✅ Optimización de costos y escalabilidad automática.\n\n🏆 Ideal para Ingenieros de Soporte (como tú) que quieren especializarse en Cloud Computing."
   }
 ]
