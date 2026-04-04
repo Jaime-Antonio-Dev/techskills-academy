@@ -32,31 +32,41 @@
   {
     "id": 4,
     "titulo": "Python para Ciencia de Datos",
-    "descripcion": "Analiza grandes volúmenes de datos y crea visualizaciones impactantes.",
-    "imagen": "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=400",
+    "descripcion": "Analiza grandes volúmenes de datos y crea visualizaciones.",
+    "imagen": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?q=80&w=400",
     "duracion": "10 Semanas",
     "nivel": "Principiante",
     "destacado": false,
-    "reseña": "Domina las librerías esenciales como Pandas, NumPy y Matplotlib para convertirte en Data Scientist."
+    "reseña": "Domina las librerías esenciales como Pandas y NumPy para convertirte en Data Scientist."
   },
   {
     "id": 5,
     "titulo": "Ciberseguridad Esencial",
     "descripcion": "Protege infraestructuras y aprende hacking ético básico.",
-    "imagen": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400",
+    "imagen": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=400",
     "duracion": "14 Semanas",
     "nivel": "Intermedio",
     "destacado": false,
-    "reseña": "Aprende a identificar vulnerabilidades y asegurar redes empresariales desde cero."
+    "reseña": "Aprende a identificar vulnerabilidades y asegurar redes empresariales."
   },
   {
     "id": 6,
     "titulo": "Diseño UX/UI con Figma",
-    "descripcion": "Crea interfaces de usuario intuitivas y prototipos navegables.",
-    "imagen": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=400",
+    "descripcion": "Crea interfaces de usuario intuitivas y prototipos.",
+    "imagen": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=400",
     "duracion": "8 Semanas",
     "nivel": "Principiante",
     "destacado": false,
-    "reseña": "Domina la herramienta líder en diseño digital y aprende metodologías de experiencia de usuario."
+    "reseña": "Domina la herramienta líder en diseño digital y metodologías de experiencia de usuario."
+  }
+  {
+    "id": 7,
+    "titulo": "Arquitectura Cloud con AWS",
+    "descripcion": "Aprende a diseñar soluciones escalables y seguras en la nube líder.",
+    "imagen": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400",
+    "duracion": "12 Semanas",
+    "nivel": "Intermedio",
+    "destacado": false,
+    "reseña": "Este curso te prepara para entender el ecosistema de Amazon Web Services. \n\nTemario:\n✅ Computación con EC2 y Lambda.\n✅ Almacenamiento con S3 y bases de datos RDS.\n✅ Redes virtuales (VPC) y seguridad (IAM).\n\nIdeal para ingenieros que buscan la certificación AWS Certified Cloud Practitioner."
   }
 ]
