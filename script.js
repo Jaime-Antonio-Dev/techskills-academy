@@ -3,8 +3,9 @@ let todosLosCursos = [];
 
 async function cargarDatos() {
     try {
-        const respuesta = await fetch('./data/cursos.json');
-        todosLosCursos = await respuesta.json(); // Guardamos los cursos
+        // El "?v=" + Date.now() obliga a GitHub a darte la versión más nueva del JSON
+        const respuesta = await fetch('./data/cursos.json?v=' + Date.now());
+        todosLosCursos = await respuesta.json(); 
         
         // --- LÓGICA PARA CATÁLOGO/INICIO ---
         const contenedorCursos = document.getElementById('contenedor-cursos');
@@ -24,7 +25,9 @@ async function cargarDatos() {
                 renderizar(misCursosFavs, contenedorFavs);
             }
         }
-    } catch (e) { console.error("Error:", e); }
+    } catch (e) { 
+        console.error("Error cargando datos:", e); 
+    }
 }
 
 // Función para crear las tarjetas en pantalla
@@ -46,13 +49,14 @@ function renderizar(lista, contenedor) {
     });
 }
 
-// --- NUEVA LÓGICA: VER DETALLES DINÁMICOS (Modal) ---
+// --- LÓGICA DE MODAL CORREGIDA (Sin Undefined) ---
 function verDetalle(id) {
-    // Buscamos el curso específico por ID
     const curso = todosLosCursos.find(c => c.id === id);
     if (!curso) return;
 
-    // Si no tienes el modal en el HTML, lo creamos dinámicamente
+    // Buscamos la reseña con ñ o sin ñ, y si no existe, ponemos un texto de respaldo
+    const textoReseña = curso.reseña || curso.resena || "La información detallada de este curso estará disponible muy pronto.";
+
     let modal = document.getElementById('modal-detalle');
     if (!modal) {
         modal = document.createElement('div');
@@ -61,30 +65,30 @@ function verDetalle(id) {
         document.body.appendChild(modal);
     }
 
-    // Dibujamos el contenido del modal con la reseña específica
     modal.innerHTML = `
         <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full relative transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]">
             <button onclick="cerrarModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 text-2xl font-bold">✕</button>
             <div class="flex gap-6 mb-6 items-center">
-                <img src="${curso.imagen}" class="w-24 h-24 object-cover rounded-xl">
+                <img src="${curso.imagen}" class="w-20 h-20 object-cover rounded-xl shadow-sm">
                 <div>
-                    <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold mb-2">${curso.nivel}</span>
-                    <h3 class="text-3xl font-bold text-gray-950">${curso.titulo}</h3>
-                    <p class="text-purple-600 font-medium">⏱ ${curso.duracion}</p>
+                    <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-bold mb-1">${curso.nivel || 'Nivel técnico'}</span>
+                    <h3 class="text-2xl font-bold text-gray-950">${curso.titulo}</h3>
+                    <p class="text-purple-600 text-sm font-medium">⏱ ${curso.duracion}</p>
                 </div>
             </div>
             
-            <h4 class="text-xl font-semibold mb-3 text-gray-900">Reseña del Curso</h4>
-            <p class="text-gray-700 leading-relaxed mb-6 whitespace-pre-line">${curso.reseña}</p>
+            <h4 class="text-lg font-bold mb-3 text-gray-900">Reseña del Curso</h4>
+            <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                <p class="text-gray-700 leading-relaxed whitespace-pre-line">${textoReseña}</p>
+            </div>
             
-            <div class="border-t border-gray-100 pt-6 flex gap-4">
+            <div class="mt-8 flex gap-4">
                 <button class="flex-grow bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition">Inscribirme ahora</button>
-                <button onclick="toggleFavorito(${curso.id})" class="bg-gray-100 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">⭐ Favorito</button>
+                <button onclick="cerrarModal()" class="bg-gray-100 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Cerrar</button>
             </div>
         </div>
     `;
 
-    // Mostramos el modal con animación
     modal.classList.remove('hidden');
     setTimeout(() => {
         modal.querySelector('div').classList.remove('scale-95');
