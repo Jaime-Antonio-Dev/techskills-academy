@@ -130,3 +130,17 @@ function toggleFavorito(id) {
 }
 
 document.addEventListener('DOMContentLoaded', cargarDatos);
+
+// --- LÓGICA DE CONTACTO ---
+const formContacto = document.getElementById('form-contacto');
+if (formContacto) {
+    formContacto.addEventListener('submit', (e) => {
+        e.preventDefault(); // Evita que la página se recargue
+        
+        // Ocultamos el formulario y mostramos éxito
+        formContacto.classList.add('hidden');
+        document.getElementById('mensaje-exito').classList.remove('hidden');
+        
+        console.log("Formulario enviado por el usuario de Bogotá");
+    });
+}
