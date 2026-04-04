@@ -6,30 +6,57 @@
     "imagen": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=400",
     "duracion": "24 Semanas",
     "nivel": "Intermedio",
-    "instructor": "Jane Doe",
     "destacado": true,
-    "reseña": "Este programa está diseñado para convertirte en un desarrollador versátil. Aprenderás a crear el lado visual con React y Tailwind, y la lógica del servidor con Node.js.\n\n✅ Enfoque práctico con proyectos reales.\n✅ Arquitectura moderna de software.\n✅ Preparación para el mercado laboral actual."
+    "reseña": "Este programa está diseñado para convertirte en un desarrollador versátil..."
   },
   {
     "id": 2,
     "titulo": "Master en React & TypeScript",
-    "descripcion": "Aprende a construir aplicaciones escalables con tipado fuerte y hooks avanzados.",
+    "descripcion": "Aprende a construir aplicaciones escalables con tipado fuerte.",
     "imagen": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=400",
     "duracion": "12 Semanas",
     "nivel": "Avanzado",
-    "instructor": "John Smith",
     "destacado": true,
-    "reseña": "Lleva tus habilidades de Frontend al siguiente nivel. El uso de TypeScript es estándar en las grandes empresas para evitar errores y mejorar la calidad del código.\n\n✅ Hooks personalizados y Context API.\n✅ Integración profunda con tipos de datos complejos.\n✅ Optimización de rendimiento en aplicaciones de gran escala."
+    "reseña": "Lleva tus habilidades de Frontend al siguiente nivel..."
   },
   {
     "id": 3,
     "titulo": "Arquitectura de Microservicios",
-    "descripcion": "Diseña sistemas distribuidos de alta disponibilidad y escalabilidad.",
+    "descripcion": "Diseña sistemas distribuidos de alta disponibilidad.",
     "imagen": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400",
     "duracion": "16 Semanas",
     "nivel": "Avanzado",
-    "instructor": "Robert Martin",
     "destacado": true,
-    "reseña": "Aprende cómo las grandes empresas como Netflix o Amazon manejan millones de usuarios. Este curso se enfoca en dividir aplicaciones grandes en servicios pequeños e independientes.\n\n✅ Comunicación entre servicios (APIs, Mensajería).\n✅ Despliegue independiente y escalabilidad horizontal.\n✅ Manejo de fallos en sistemas distribuidos."
+    "reseña": "Aprende cómo las grandes empresas manejan millones de usuarios..."
+  },
+  {
+    "id": 4,
+    "titulo": "Python para Ciencia de Datos",
+    "descripcion": "Analiza grandes volúmenes de datos y crea visualizaciones impactantes.",
+    "imagen": "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=400",
+    "duracion": "10 Semanas",
+    "nivel": "Principiante",
+    "destacado": false,
+    "reseña": "Domina las librerías esenciales como Pandas, NumPy y Matplotlib para convertirte en Data Scientist."
+  },
+  {
+    "id": 5,
+    "titulo": "Ciberseguridad Esencial",
+    "descripcion": "Protege infraestructuras y aprende hacking ético básico.",
+    "imagen": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400",
+    "duracion": "14 Semanas",
+    "nivel": "Intermedio",
+    "destacado": false,
+    "reseña": "Aprende a identificar vulnerabilidades y asegurar redes empresariales desde cero."
+  },
+  {
+    "id": 6,
+    "titulo": "Diseño UX/UI con Figma",
+    "descripcion": "Crea interfaces de usuario intuitivas y prototipos navegables.",
+    "imagen": "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=400",
+    "duracion": "8 Semanas",
+    "nivel": "Principiante",
+    "destacado": false,
+    "reseña": "Domina la herramienta líder en diseño digital y aprende metodologías de experiencia de usuario."
   }
 ]
