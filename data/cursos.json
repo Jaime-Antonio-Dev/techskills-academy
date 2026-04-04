@@ -7,7 +7,8 @@
     "duracion": "24 Semanas",
     "nivel": "Intermedio",
     "instructor": "Jane Doe",
-    "destacado": true
+    "destacado": true,
+    "reseña": "Este programa está diseñado para convertirte en un desarrollador versátil. Aprenderás a crear el lado visual con React y Tailwind, y la lógica del servidor con Node.js.\n\n✅ Enfoque práctico con proyectos reales.\n✅ Arquitectura moderna de software.\n✅ Preparación para el mercado laboral actual."
   },
   {
     "id": 2,
@@ -17,7 +18,8 @@
     "duracion": "12 Semanas",
     "nivel": "Avanzado",
     "instructor": "John Smith",
-    "destacado": true
+    "destacado": true,
+    "reseña": "Lleva tus habilidades de Frontend al siguiente nivel. El uso de TypeScript es estándar en las grandes empresas para evitar errores y mejorar la calidad del código.\n\n✅ Hooks personalizados y Context API.\n✅ Integración profunda con tipos de datos complejos.\n✅ Optimización de rendimiento en aplicaciones de gran escala."
   },
   {
     "id": 3,
@@ -27,6 +29,7 @@
     "duracion": "16 Semanas",
     "nivel": "Avanzado",
     "instructor": "Robert Martin",
-    "destacado": true
+    "destacado": true,
+    "reseña": "Aprende cómo las grandes empresas como Netflix o Amazon manejan millones de usuarios. Este curso se enfoca en dividir aplicaciones grandes en servicios pequeños e independientes.\n\n✅ Comunicación entre servicios (APIs, Mensajería).\n✅ Despliegue independiente y escalabilidad horizontal.\n✅ Manejo de fallos en sistemas distribuidos."
   }
 ]
