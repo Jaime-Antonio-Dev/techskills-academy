@@ -3,39 +3,41 @@ let todosLosCursos = [];
 
 async function cargarDatos() {
     try {
-        // El "?v=" + Date.now() obliga a GitHub a darte la versión más nueva del JSON
         const respuesta = await fetch('./data/cursos.json?v=' + Date.now());
         todosLosCursos = await respuesta.json(); 
         
-        // --- LÓGICA PARA CATÁLOGO/INICIO ---
-const contenedorCursos = document.getElementById('contenedor-cursos');
-if (contenedorCursos) {
-    // Si el ID del contenedor indica que es el INICIO (puedes ponerle un id diferente en el HTML del index)
-    // o simplemente filtramos si estamos en index.html
-    if (window.location.pathname.includes('index.html') || window.location.pathname === '/') {
-        const destacados = todosLosCursos.filter(c => c.destacado === true);
-        renderizar(destacados, contenedorCursos);
-    } else {
-        // En catalogo.html mostramos TODO
-        renderizar(todosLosCursos, contenedorCursos);
-    }
-}
+        const contenedorCursos = document.getElementById('contenedor-cursos');
+        
+        if (contenedorCursos) {
+            // VERIFICACIÓN: ¿Es la página de Inicio? 
+            // Buscamos si el título de la sección dice "Destacados" o si estamos en index.html
+            const esInicio = document.querySelector('h2')?.innerText.toLowerCase().includes('destacados') || 
+                             window.location.pathname.includes('index.html') || 
+                             window.location.pathname === '/techskills-academy/' ||
+                             window.location.pathname === '/';
 
-        // --- LÓGICA PARA FAVORITOS ---
+            if (esInicio) {
+                // Solo los que tienen destacado: true
+                const destacados = todosLosCursos.filter(c => c.destacado === true);
+                renderizar(destacados, contenedorCursos);
+            } else {
+                // En Catálogo mostramos los 6
+                renderizar(todosLosCursos, contenedorCursos);
+            }
+        }
+
+        // --- LÓGICA PARA FAVORITOS (Se mantiene igual) ---
         const contenedorFavs = document.getElementById('contenedor-favoritos');
         if (contenedorFavs) {
             const IDsFavoritos = JSON.parse(localStorage.getItem('misFavoritos')) || [];
             const misCursosFavs = todosLosCursos.filter(c => IDsFavoritos.includes(c.id));
-            
             if (misCursosFavs.length === 0) {
                 contenedorFavs.innerHTML = '<p class="text-center col-span-3 text-gray-500 py-10">Aún no tienes cursos guardados. ⭐</p>';
             } else {
                 renderizar(misCursosFavs, contenedorFavs);
             }
         }
-    } catch (e) { 
-        console.error("Error cargando datos:", e); 
-    }
+    } catch (e) { console.error("Error:", e); }
 }
 
 // Función para crear las tarjetas en pantalla
