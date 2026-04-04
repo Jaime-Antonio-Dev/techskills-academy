@@ -33,11 +33,11 @@
     "id": 4,
     "titulo": "Python para Ciencia de Datos",
     "descripcion": "Analiza grandes volúmenes de datos y crea visualizaciones.",
-    "imagen": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?q=80&w=400",
+    "imagen": "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=400", // IMAGEN CORREGIDA: Gráficos y datos
     "duracion": "10 Semanas",
     "nivel": "Principiante",
     "destacado": false,
-    "reseña": "Domina las herramientas esenciales para convertir datos crudos en información valiosa para la toma de decisiones.\n\n✅ Fundamentos sólidos de programación con Python.\n✅ Análisis exploratorio de datos con Pandas y NumPy.\n✅ Visualización interactiva con Matplotlib y Seaborn.\n✅ Introducción a modelos básicos de Machine Learning.\n\n⏱ Requisito: Ganas de aprender y lógica matemática básica."
+    "reseña": "Domina las librerías esenciales como Pandas, NumPy y Matplotlib para convertirte en Data Scientist.\n\n✅ Fundamentos sólidos de programación con Python.\n✅ Análisis exploratorio de datos.\n✅ Visualización interactiva con Matplotlib y Seaborn."
   },
   {
     "id": 5,
@@ -59,14 +59,14 @@
     "destacado": false,
     "reseña": "Aprende a crear experiencias digitales que los usuarios amen, dominando la herramienta líder de diseño de la industria.\n\n✅ Metodologías de investigación de experiencia de usuario (UX).\n✅ Diseño de interfaces visuales (UI) y sistemas de diseño.\n✅ Prototipado interactivo y animado con Figma.\n✅ Pruebas de usabilidad y feedback de usuarios.\n\n⏱ Requisito: Un perfil creativo e interés en tecnología."
   },
-  {
+ {
     "id": 7,
     "titulo": "Arquitectura Cloud con AWS",
     "descripcion": "Aprende a diseñar soluciones escalables y seguras en la nube líder.",
-    "imagen": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400",
+    "imagen": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=400", // IMAGEN CORREGIDA: Servidores y red (Nube)
     "duracion": "12 Semanas",
     "nivel": "Intermedio",
     "destacado": false,
-    "reseña": "Este curso te prepara para entender y utilizar el ecosistema de Amazon Web Services, el proveedor de nube líder.\n\nTemario destacado:\n✅ Computación escalable (EC2, Lambda).\n✅ Almacenamiento y bases de datos RDS.\n✅ Redes virtuales (VPC) y seguridad (IAM).\n✅ Optimización de costos y escalabilidad automática.\n\n🏆 Ideal para Ingenieros de Soporte (como tú) que quieren especializarse en Cloud Computing."
+    "reseña": "Este curso te prepara para entender y utilizar el ecosistema de Amazon Web Services, el proveedor de nube líder.\n\nTemario destacado:\n✅ Computación escalable (EC2, Lambda).\n✅ Almacenamiento y bases de datos RDS.\n✅ Redes virtuales (VPC) y seguridad (IAM)."
   }
 ]
