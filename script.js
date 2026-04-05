@@ -3,7 +3,7 @@ let todosLosCursos = [];
 
 async function cargarDatos() {
     try {
-        // Usamos una ruta más robusta para GitHub Pages
+        // ruta más robusta para GitHub Pages
         const respuesta = await fetch('./data/cursos.json?v=' + Date.now());
         
         if (!respuesta.ok) {
@@ -17,7 +17,7 @@ async function cargarDatos() {
         
         // --- LÓGICA PARA CATÁLOGO / INICIO ---
         if (contenedorCursos) {
-            // Verificamos si es el inicio buscando la sección de "Destacados" en el texto de la página
+            // Verificar si es el inicio buscando la sección de "Destacados" en el texto de la página
             const textoPagina = document.body.innerText.toLowerCase();
             const esInicio = textoPagina.includes('destacados');
 
@@ -121,7 +121,7 @@ function toggleFavorito(id) {
     }
     localStorage.setItem('misFavoritos', JSON.stringify(favs));
     
-    // Si estamos en la página de favoritos, recargamos para que desaparezca la tarjeta
+    // Si estoy en la página de favoritos, recargamos para que desaparezca la tarjeta
     if (document.getElementById('contenedor-favoritos')) {
         cargarDatos(); 
     } else {
@@ -137,7 +137,7 @@ if (formContacto) {
     formContacto.addEventListener('submit', (e) => {
         e.preventDefault(); // Evita que la página se recargue
         
-        // Ocultamos el formulario y mostramos éxito
+        // Ocultar el formulario y mostramos éxito
         formContacto.classList.add('hidden');
         document.getElementById('mensaje-exito').classList.remove('hidden');
         
