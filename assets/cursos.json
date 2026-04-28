@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "titulo": "Master en Desarrollo Web Fullstack",
+    "descripcion": "Domina las tecnologías más demandadas: React, Tailwind CSS y Node.js.",
+    "imagen": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=400",
+    "duracion": "24 Semanas",
+    "nivel": "Intermedio",
+    "destacado": true,
+    "reseña": "Este programa está diseñado para convertirte en un desarrollador versátil, capaz de construir aplicaciones web modernas de principio a fin.\n\n✅ Enfoque práctico con proyectos reales.\n✅ Dominio de React, Node.js y Express.\n✅ Arquitectura de software y bases de datos.\n\n🏆 Al finalizar, estarás listo para roles Fullstack."
+  },
+  {
+    "id": 2,
+    "titulo": "Master en React & TypeScript",
+    "descripcion": "Aprende a construir aplicaciones escalables con tipado fuerte.",
+    "imagen": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=400",
+    "duracion": "12 Semanas",
+    "nivel": "Avanzado",
+    "destacado": true,
+    "reseña": "Lleva tus habilidades de Frontend al siguiente nivel con la combinación más potente: React y TypeScript.\n\n✅ Hooks personalizados y Context API.\n✅ Integración profunda con tipos genéricos.\n✅ Optimización de rendimiento a gran escala.\n\n⏱ Requisito: Conocimientos sólidos de JavaScript."
+  },
+  {
+    "id": 3,
+    "titulo": "Arquitectura de Microservicios",
+    "descripcion": "Diseña sistemas distribuidos de alta disponibilidad.",
+    "imagen": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=400",
+    "duracion": "16 Semanas",
+    "nivel": "Avanzado",
+    "destacado": true,
+    "reseña": "Aprende a diseñar sistemas distribuidos y resilientes, la arquitectura detrás de Netflix y Amazon.\n\n✅ Descomposición de monolitos.\n✅ Comunicación vía APIs REST y Mensajería.\n✅ Patrones de resiliencia y tolerancia a fallos.\n\n🏆 Ideal para Ingenieros de Software con experiencia."
+  },
+  {
+    "id": 4,
+    "titulo": "Python para Ciencia de Datos",
+    "descripcion": "Analiza grandes volúmenes de datos y crea visualizaciones.",
+    "imagen": "https://images.unsplash.com/photo-1551288049-bbda38a10ad5?q=80&w=400",
+    "duracion": "10 Semanas",
+    "nivel": "Principiante",
+    "destacado": false,
+    "reseña": "Domina las herramientas esenciales para convertir datos en información valiosa.\n\n✅ Análisis de datos con Pandas y NumPy.\n✅ Visualización con Matplotlib y Seaborn.\n✅ Introducción a Machine Learning.\n\n⏱ Requisito: Lógica de programación básica."
+  },
+  {
+    "id": 5,
+    "titulo": "Ciberseguridad Esencial",
+    "descripcion": "Protege infraestructuras y aprende hacking ético básico.",
+    "imagen": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=400",
+    "duracion": "14 Semanas",
+    "nivel": "Intermedio",
+    "destacado": false,
+    "reseña": "Aprende a pensar como un atacante para defender organizaciones.\n\n✅ Fundamentos de redes y seguridad.\n✅ Metodologías de Hacking Ético.\n✅ Identificación y mitigación de riesgos.\n\n🏆 Preparación para certificaciones iniciales."
+  },
+  {
+    "id": 6,
+    "titulo": "Diseño UX/UI con Figma",
+    "descripcion": "Crea interfaces de usuario intuitivas y prototipos.",
+    "imagen": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=400",
+    "duracion": "8 Semanas",
+    "nivel": "Principiante",
+    "destacado": false,
+    "reseña": "Crea experiencias digitales increíbles dominando la herramienta líder de la industria.\n\n✅ Metodologías de investigación UX.\n✅ Diseño de interfaces (UI) y Design Systems.\n✅ Prototipado interactivo en Figma.\n\n⏱ Requisito: Interés en diseño y tecnología."
+  },
+  {
+    "id": 7,
+    "titulo": "Arquitectura Cloud con AWS",
+    "descripcion": "Aprende a diseñar soluciones escalables en la nube líder.",
+    "imagen": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400",
+    "duracion": "12 Semanas",
+    "nivel": "Intermedio",
+    "destacado": false,
+    "reseña": "Domina el ecosistema de Amazon Web Services, la plataforma cloud más utilizada.\n\n✅ Computación (EC2, Lambda).\n✅ Almacenamiento S3 y bases de datos RDS.\n✅ Seguridad (IAM) y redes (VPC).\n\n🏆 Ideal para profesionales que buscan especializarse en Cloud."
+  }
+]
