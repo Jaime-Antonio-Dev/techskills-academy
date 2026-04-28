@@ -1,0 +1,71 @@
+<header class="bg-white shadow-md p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-purple-600">TechSkills Academy</h1>
+        <nav>
+            <ul class="flex space-x-6 font-semibold">
+                <li><a href="#" class="hover:text-purple-500">Inicio</a></li>
+                <li><a href="#" class="hover:text-purple-500">Cursos</a></li>
+                <li><a href="#" class="hover:text-purple-500">Favoritos</a></li>
+                <li><a href="#" class="hover:text-purple-500">Nosotros</a></li>
+                <li><a href="#" class="hover:text-purple-500">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="bg-purple-600 text-white py-20 text-center">
+        <h2 class="text-4xl font-bold mb-4">Aprende las habilidades tecnológicas del futuro</h2>
+        <p class="text-xl mb-8">Impulsa tu carrera con cursos diseñados por expertos de la industria.</p>
+        <a href="#" class="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100">Ver Catálogo</a>
+    </section>
+
+    <section class="container mx-auto py-12">
+        <h3 class="text-3xl font-bold text-center mb-8">Cursos Destacados</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
+            <div *ngFor="let curso of misCursos" class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                <img [src]="curso.imagen" [alt]="curso.titulo" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-bold px-2 py-1 bg-purple-100 text-purple-600 rounded-full">{{ curso.nivel }}</span>
+                        <span class="text-gray-500 text-sm">{{ curso.duracion }}</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-gray-800">{{ curso.titulo }}</h4>
+                    <p class="text-gray-600 text-sm mb-4">{{ curso.resena }}</p>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 transition">
+                        Más información
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-gray-800 text-white py-12 mt-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div>
+            <h4 class="text-xl font-bold mb-4 text-purple-400">TechSkills Academy</h4>
+            <p class="text-gray-400">Formando los líderes tecnológicos de LATAM.</p>
+        </div>
+        <div>
+            <h4 class="text-xl font-bold mb-4 text-purple-400">Contacto</h4>
+            <ul class="text-gray-400 space-y-2">
+                <li>📍 Bogotá, Colombia</li>
+                <li>📞 +57 300 000 0000</li>
+                <li>📧 soporte@techskills.academy</li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xl font-bold mb-4 text-purple-400">Síguenos</h4>
+            <div class="flex justify-center md:justify-start space-x-4">
+                <a href="#" class="hover:text-purple-400">Facebook</a>
+                <a href="#" class="hover:text-purple-400">LinkedIn</a>
+                <a href="#" class="hover:text-purple-400">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+        <p>© 2026 TechSkills Academy - Todos los derechos reservados.</p>
+    </div>
+</footer>   
