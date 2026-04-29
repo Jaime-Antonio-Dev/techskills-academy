@@ -16,7 +16,9 @@ Diseño Responsivo y Moderno: Estilizado mediante Tailwind CSS, garantizando una
 
 Validación de Formularios: Sistema de contacto con validaciones en tiempo real para asegurar la integridad de la información recolectada.
 
-🛠️ Tecnologías Utilizadas (Actualizado)
+
+## 🛠️ Tecnologías Utilizadas
+
 Angular 17: Framework principal para la arquitectura SPA (Single Page Application).
 
 TypeScript: Lenguaje base para asegurar un tipado fuerte y código mantenible.
